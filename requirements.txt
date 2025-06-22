@@ -1,4 +1,5 @@
 streamlit==1.25.0
+streamlit_extras
 langchain
 langchain-community
 openai
