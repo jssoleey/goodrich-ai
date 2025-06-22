@@ -250,7 +250,8 @@ def run_sale_bot() :
             reset_session_for_new_case()
             
         if st.sidebar.button("🏠 메인으로 돌아가기", use_container_width=True):
-            switch_page("main")  # 파일명이 main.py여야 함
+            st.session_state.clear()   # ⭐️ 모든 세션 상태 값 삭제
+            switch_page("main")
 
         if st.sidebar.button("로그아웃", use_container_width=True):
             st.session_state.page = "login"
